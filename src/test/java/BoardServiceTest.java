@@ -1,8 +1,11 @@
+import com.trello.model.Column;
 import com.trello.service.BoardService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.runners.Suite;
+
+import java.util.HashSet;
 
 
 public class BoardServiceTest {
@@ -33,4 +36,12 @@ public class BoardServiceTest {
         Assertions.assertEquals(created1, false);
     }
 
+    @Test
+    public void testBoardAddWithColumns(){
+        Column c = new Column(2l,"c1", "card1", 2L);
+        HashSet<Column> columns = new HashSet<>();
+        columns.add(c);
+        boolean created = bs.createBoardWithColumns(8L, "Abc", columns,1L);
+        Assertions.assertEquals(created, true);
+    }
 }

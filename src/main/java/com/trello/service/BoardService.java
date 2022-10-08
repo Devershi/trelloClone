@@ -1,11 +1,9 @@
 package com.trello.service;
 
 import com.trello.model.Board;
+import com.trello.model.Column;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class BoardService {
 
@@ -20,14 +18,19 @@ public class BoardService {
     }
 
     public boolean createBoard(Long id, String name, Long createdBy) {
+        return createBoardWithColumns(id, name, null, createdBy);
+    }
+
+    public boolean createBoardWithColumns(Long id, String name, Set<Column> columns, Long createdBy) {
         if(id == null || name.isEmpty()){
-           return  false;
+            return  false;
         }
 
         if(activeBoards.contains(id) || deletedBoards.contains(id)){
             return false;
         }
-        Board board = new Board(id, name, createdBy);
+
+        Board board = new Board(id, name, columns, createdBy);
         activeBoards.add(id);
         boardMap.put(id, board);
         return true;
@@ -44,5 +47,7 @@ public class BoardService {
         }
         return true;
     }
+
+
 
 }
