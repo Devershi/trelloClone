@@ -6,7 +6,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class CardServiceTest {
     static CardService cs;
@@ -54,5 +56,18 @@ public class CardServiceTest {
         Assertions.assertEquals(created, true);
         List<Card> cardsNow = cs.getAllCardsAfterTime(System.currentTimeMillis() - 2000);
         Assertions.assertTrue(cardsNow.size() > 0);
+    }
+
+    @Test
+    public void testCardForTag(){
+        Column c = new Column(1L,"c1","c1",1L);
+        Set<String> labels = new HashSet<>();
+        labels.add("tag1");
+        boolean created = cs.createCard(4L, "card4", "des", c,labels, 2L);
+        Assertions.assertEquals(created, true);
+        List<Card> cardsNow = cs.getAllCardsWithTag("tag1");
+        Assertions.assertTrue(cardsNow.size() > 0);
+        cardsNow = cs.getAllCardsWithTag("tag2");
+        Assertions.assertTrue(cardsNow.size() == 0);
     }
 }

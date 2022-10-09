@@ -60,5 +60,18 @@ public class CardService implements ICardService{
         return  res;
     }
 
+    @Override
+    public List<Card> getAllCardsWithTag(String tag) {
+        if(tag == null || tag.isEmpty())
+            return Collections.emptyList();
+        List<Card> res = new ArrayList<>();
+        if(tagVsCardMapping.containsKey(tag)) {
+            for (Long id : tagVsCardMapping.get(tag)) {
+                res.add(cardMap.get(id));
+            }
+        }
+        return  res;
+    }
+
     // Map<String, Set<Card>> tagVsCardIgnoreCaseMapping;
 }
