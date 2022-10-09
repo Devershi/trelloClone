@@ -48,6 +48,12 @@ public class BoardService implements IBoardService{
         return true;
     }
 
+    @Override
+    public void printBoardAsJSON(Long id) {
+
+    }
+
+
 
 
 }

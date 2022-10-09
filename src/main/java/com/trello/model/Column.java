@@ -12,7 +12,7 @@ public class Column {
     private boolean isDeleted;
     private Long createdAt;
     private Long lastUpdated;
-
+    private List<Card> cardsAdded;
     public void setId(Long id) {
         this.id = id;
     }
@@ -77,7 +77,6 @@ public class Column {
         return cardsAdded;
     }
 
-    private List<Card> cardsAdded;
 
     public Column(Long id, String name, String description, Long createdBy){
         this.id = id;
@@ -95,5 +94,18 @@ public class Column {
         this.createdBy = createdBy;
         this.createdAt = System.currentTimeMillis();
         this.cardsAdded = cards == null ? new ArrayList<>() : cards;
+    }
+    public boolean addCard(Card card){
+        if (card == null)
+            return false;
+        this.cardsAdded.add(card);
+        return true;
+    }
+
+    public boolean removeLabel(Card card) {
+        if (card == null)
+            return false;
+        this.cardsAdded.remove(card);
+        return true;
     }
 }

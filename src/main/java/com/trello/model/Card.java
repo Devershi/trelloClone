@@ -1,10 +1,12 @@
 package com.trello.model;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Card {
     private Long id;
-    private Long columnId;
     private Long createdBy;
     private String name;
     private String description;
@@ -19,14 +21,6 @@ public class Card {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getColumnId() {
-        return columnId;
-    }
-
-    public void setColumnId(Long columnId) {
-        this.columnId = columnId;
     }
 
     public Long getCreatedBy() {
@@ -83,5 +77,40 @@ public class Card {
 
     public void setLabels(Set<String> labels) {
         this.labels = labels;
+    }
+
+    public Card(){
+        this.labels = new HashSet<>();
+    }
+    public Card(Long id, String name, String description, Long createdBy){
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.createdBy = createdBy;
+        this.createdAt = System.currentTimeMillis();
+        this.labels = new HashSet<>();
+    }
+
+    public Card(Long id, String name, String description, Set<String> labels, Long createdBy){
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.createdBy = createdBy;
+        this.createdAt = System.currentTimeMillis();
+        this.labels = labels == null ? new HashSet<>() : labels;
+    }
+
+    public boolean addLabel(String label){
+        if(label == null || label.isEmpty())
+            return false;
+        this.labels.add(label);
+        return true;
+    }
+
+    public boolean removeLabel(String label) {
+        if(label == null || label.isEmpty())
+            return false;
+        this.labels.remove(label);
+        return true;
     }
 }

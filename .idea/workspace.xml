@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b38c37b7-3a9e-4e09-8b47-9a23570648a9" name="Changes" comment="columnService Initial commit.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/CardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/IBoardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/IColumnService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/ISearchService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/SearchService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SearchServiceTest.java" afterDir="false" />
+    <list default="true" id="b38c37b7-3a9e-4e09-8b47-9a23570648a9" name="Changes" comment="searchService Initial commit.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/ICardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/model/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/model/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/model/Column.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/ColumnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/ColumnService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ColumnsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ColumnsServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/IBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/IBoardService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665264137571</updated>
       <workItem from="1665264138812" duration="1508000" />
-      <workItem from="1665265668640" duration="8267000" />
+      <workItem from="1665265668640" duration="11575000" />
     </task>
     <task id="LOCAL-00001" summary="BoardService Initial commit.">
       <created>1665267376492</created>
@@ -149,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665271179332</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="searchService Initial commit.">
+      <created>1665301488935</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665301488935</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +173,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BoardService Initial commit." />
     <MESSAGE value="columnService Initial commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="columnService Initial commit." />
+    <MESSAGE value="searchService Initial commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="searchService Initial commit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
