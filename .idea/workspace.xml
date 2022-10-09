@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b38c37b7-3a9e-4e09-8b47-9a23570648a9" name="Changes" comment="BoardService Initial commit.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/ColumnService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ColumnsServiceTest.java" afterDir="false" />
+    <list default="true" id="b38c37b7-3a9e-4e09-8b47-9a23570648a9" name="Changes" comment="columnService Initial commit.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/CardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/IBoardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/IColumnService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/ISearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/SearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SearchServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/model/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/model/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/model/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/model/Column.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BoardServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BoardServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/ColumnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/ColumnService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ColumnsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ColumnsServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -61,7 +66,7 @@
       <recent name="service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ColumnsServiceTest">
+  <component name="RunManager" selected="JUnit.SearchServiceTest">
     <configuration name="BoardServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrelloClone" />
       <option name="PACKAGE_NAME" value="" />
@@ -100,8 +105,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearchServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TrelloClone" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SearchServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SearchServiceTest" />
         <item itemvalue="JUnit.ColumnsServiceTest" />
         <item itemvalue="JUnit.BoardServiceTest" />
         <item itemvalue="JUnit.BoardServiceTest.testBoardAddWithColumns" />
@@ -118,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665264137571</updated>
       <workItem from="1665264138812" duration="1508000" />
-      <workItem from="1665265668640" duration="5485000" />
+      <workItem from="1665265668640" duration="8267000" />
     </task>
     <task id="LOCAL-00001" summary="BoardService Initial commit.">
       <created>1665267376492</created>
@@ -127,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665267376492</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="columnService Initial commit.">
+      <created>1665271179332</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665271179332</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +168,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BoardService Initial commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="BoardService Initial commit." />
+    <MESSAGE value="columnService Initial commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="columnService Initial commit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

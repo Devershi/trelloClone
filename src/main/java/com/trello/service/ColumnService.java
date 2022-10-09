@@ -6,7 +6,7 @@ import com.trello.model.Column;
 
 import java.util.*;
 
-public class ColumnService {
+public class ColumnService implements IColumnService {
     Map<Long, Long> columnToBoardMapping;
     Map<Long, Column> columnMap;
     Set<Long> activeColumns;
@@ -38,5 +38,14 @@ public class ColumnService {
         columnMap.put(id, column);
         columnToBoardMapping.put(id, board.getId());
         return true;
+    }
+
+    public boolean hasColumnWithId(Long id) {
+        return activeColumns.contains(id);
+    }
+
+    public List<Card> getCardsForColumn(Long columnId){
+        return (columnId == null || !activeColumns.contains(columnId)) ?
+                Collections.emptyList() : columnMap.get(columnId).getCardsAdded();
     }
 }

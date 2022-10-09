@@ -5,7 +5,7 @@ import com.trello.model.Column;
 
 import java.util.*;
 
-public class BoardService {
+public class BoardService implements IBoardService{
 
     Set<Long> activeBoards;
     Set<Long> deletedBoards;
