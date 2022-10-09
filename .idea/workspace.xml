@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b38c37b7-3a9e-4e09-8b47-9a23570648a9" name="Changes" comment="searchService Initial commit.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/ICardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/UserService.java" afterDir="false" />
+    <list default="true" id="b38c37b7-3a9e-4e09-8b47-9a23570648a9" name="Changes" comment="cardservice Initial commit.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CardServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/model/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/model/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/model/Column.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/BoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/CardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/IBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/IBoardService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,7 +58,7 @@
       <recent name="service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SearchServiceTest">
+  <component name="RunManager" selected="JUnit.CardServiceTest">
     <configuration name="BoardServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrelloClone" />
       <option name="PACKAGE_NAME" value="" />
@@ -83,12 +78,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardServiceTest.testBoardAddWithoutId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TrelloClone" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BoardServiceTest" />
-      <option name="METHOD_NAME" value="testBoardAddWithoutId" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="CardServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,11 +107,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CardServiceTest" />
         <item itemvalue="JUnit.SearchServiceTest" />
         <item itemvalue="JUnit.ColumnsServiceTest" />
         <item itemvalue="JUnit.BoardServiceTest" />
         <item itemvalue="JUnit.BoardServiceTest.testBoardAddWithColumns" />
-        <item itemvalue="JUnit.BoardServiceTest.testBoardAddWithoutId" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665264137571</updated>
       <workItem from="1665264138812" duration="1508000" />
-      <workItem from="1665265668640" duration="11575000" />
+      <workItem from="1665265668640" duration="14648000" />
     </task>
     <task id="LOCAL-00001" summary="BoardService Initial commit.">
       <created>1665267376492</created>
@@ -153,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665301488935</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="cardservice Initial commit.">
+      <created>1665306301452</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665306301452</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +175,8 @@
     <MESSAGE value="BoardService Initial commit." />
     <MESSAGE value="columnService Initial commit." />
     <MESSAGE value="searchService Initial commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="searchService Initial commit." />
+    <MESSAGE value="cardservice Initial commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="cardservice Initial commit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
