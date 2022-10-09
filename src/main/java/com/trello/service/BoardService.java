@@ -2,7 +2,6 @@ package com.trello.service;
 
 import com.trello.model.Board;
 import com.trello.model.Column;
-
 import java.util.*;
 
 public class BoardService implements IBoardService{
@@ -10,6 +9,30 @@ public class BoardService implements IBoardService{
     Set<Long> activeBoards;
     Set<Long> deletedBoards;
     Map<Long, Board> boardMap;
+
+    public Set<Long> getActiveBoards() {
+        return activeBoards;
+    }
+
+    public void setActiveBoards(Set<Long> activeBoards) {
+        this.activeBoards = activeBoards;
+    }
+
+    public Set<Long> getDeletedBoards() {
+        return deletedBoards;
+    }
+
+    public void setDeletedBoards(Set<Long> deletedBoards) {
+        this.deletedBoards = deletedBoards;
+    }
+
+    public Map<Long, Board> getBoardMap() {
+        return boardMap;
+    }
+
+    public void setBoardMap(Map<Long, Board> boardMap) {
+        this.boardMap = boardMap;
+    }
 
     public BoardService(){
        this.activeBoards = new HashSet<>();

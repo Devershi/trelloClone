@@ -13,6 +13,54 @@ public class CardService implements ICardService{
     Set<Long> activeCards;
     Set<Long> deletedCards;
 
+    public Map<Long, Long> getCardToColumnMapping() {
+        return cardToColumnMapping;
+    }
+
+    public void setCardToColumnMapping(Map<Long, Long> cardToColumnMapping) {
+        this.cardToColumnMapping = cardToColumnMapping;
+    }
+
+    public Map<String, Set<Long>> getTagVsCardMapping() {
+        return tagVsCardMapping;
+    }
+
+    public void setTagVsCardMapping(Map<String, Set<Long>> tagVsCardMapping) {
+        this.tagVsCardMapping = tagVsCardMapping;
+    }
+
+    public SortedMap<Long, Long> getTimestampCardMapping() {
+        return timestampCardMapping;
+    }
+
+    public void setTimestampCardMapping(SortedMap<Long, Long> timestampCardMapping) {
+        this.timestampCardMapping = timestampCardMapping;
+    }
+
+    public Map<Long, Card> getCardMap() {
+        return cardMap;
+    }
+
+    public void setCardMap(Map<Long, Card> cardMap) {
+        this.cardMap = cardMap;
+    }
+
+    public Set<Long> getActiveCards() {
+        return activeCards;
+    }
+
+    public void setActiveCards(Set<Long> activeCards) {
+        this.activeCards = activeCards;
+    }
+
+    public Set<Long> getDeletedCards() {
+        return deletedCards;
+    }
+
+    public void setDeletedCards(Set<Long> deletedCards) {
+        this.deletedCards = deletedCards;
+    }
+
     public CardService(){
        this.activeCards = new HashSet<>();
        this.deletedCards = new HashSet<>();
@@ -33,6 +81,7 @@ public class CardService implements ICardService{
         activeCards.add(id);
         cardMap.put(id, c);
         cardToColumnMapping.put(id, column.getId());
+        column.addCard(c);
         timestampCardMapping.put(System.currentTimeMillis(), id);
         if(labels != null) {
             for (String label : labels) {

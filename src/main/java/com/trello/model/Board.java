@@ -85,5 +85,17 @@ public class Board {
 
     }
 
+    public boolean addColumn(Column column){
+        if (column == null)
+            return false;
+        this.columns.add(column);
+        return true;
+    }
 
+    public boolean removeColumn(Column column){
+        if (column == null)
+            return false;
+        this.columns.remove(column);
+        return true;
+    }
 }

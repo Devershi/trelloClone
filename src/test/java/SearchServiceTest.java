@@ -10,17 +10,16 @@ import java.util.List;
 
 public class SearchServiceTest {
 
-    static ColumnService cs;
+    static ColumnService columnService;
     static SearchService ss;
     @BeforeAll
     public static void setup(){
-        cs = new ColumnService();
-        ss = new SearchService(null, cs, null);
+        columnService = new ColumnService();
+        ss = new SearchService(null, columnService, null);
     }
 
     @Test
     public void testGetCardsWithInvalidColumnId(){
-
         List<Card> cards = ss.getAllCardsInColumnId(1L);
         Assertions.assertEquals(cards.size(), 0L);
     }
@@ -30,4 +29,6 @@ public class SearchServiceTest {
         List<Card> cards = ss.getAllCardsInColumn(null);
         Assertions.assertEquals(cards.size(), 0L);
     }
+
+
 }

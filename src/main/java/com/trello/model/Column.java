@@ -102,7 +102,7 @@ public class Column {
         return true;
     }
 
-    public boolean removeLabel(Card card) {
+    public boolean removeCard(Card card) {
         if (card == null)
             return false;
         this.cardsAdded.remove(card);

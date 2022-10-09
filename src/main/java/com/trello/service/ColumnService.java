@@ -12,6 +12,38 @@ public class ColumnService implements IColumnService {
     Set<Long> activeColumns;
     Set<Long> deletedColumns;
 
+    public Map<Long, Long> getColumnToBoardMapping() {
+        return columnToBoardMapping;
+    }
+
+    public void setColumnToBoardMapping(Map<Long, Long> columnToBoardMapping) {
+        this.columnToBoardMapping = columnToBoardMapping;
+    }
+
+    public Map<Long, Column> getColumnMap() {
+        return columnMap;
+    }
+
+    public void setColumnMap(Map<Long, Column> columnMap) {
+        this.columnMap = columnMap;
+    }
+
+    public Set<Long> getActiveColumns() {
+        return activeColumns;
+    }
+
+    public void setActiveColumns(Set<Long> activeColumns) {
+        this.activeColumns = activeColumns;
+    }
+
+    public Set<Long> getDeletedColumns() {
+        return deletedColumns;
+    }
+
+    public void setDeletedColumns(Set<Long> deletedColumns) {
+        this.deletedColumns = deletedColumns;
+    }
+
     public ColumnService(){
         this.activeColumns = new HashSet<>();
         this.deletedColumns = new HashSet<>();
@@ -36,6 +68,7 @@ public class ColumnService implements IColumnService {
         Column column = new Column(id, name, description, cards, createdBy);
         activeColumns.add(id);
         columnMap.put(id, column);
+        board.addColumn(column);
         columnToBoardMapping.put(id, board.getId());
         return true;
     }
