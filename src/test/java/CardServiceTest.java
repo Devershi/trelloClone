@@ -45,7 +45,7 @@ public class CardServiceTest {
         Column c = new Column(1L,"c1","c1",1L);
         boolean created = cs.createCard(2L, "card2", "des", c, null, 2L);
         Assertions.assertEquals(created, true);
-        List<Card> cardsNow = cs.getAllCardsAfterTime(System.currentTimeMillis());
+        List<Card> cardsNow = cs.getAllCardsAfterTime(System.currentTimeMillis()+1);
         Assertions.assertEquals(cardsNow.size(), 0);
     }
 
