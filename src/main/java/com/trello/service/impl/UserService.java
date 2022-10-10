@@ -1,14 +1,14 @@
-package com.trello.service;
+package com.trello.service.impl;
 
 import com.trello.model.Board;
 import com.trello.model.Card;
 import com.trello.model.Column;
-import com.trello.model.User;
+import com.trello.service.IUserService;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class UserService implements IUserService{
+public class UserService implements IUserService {
     BoardService boardService;
     CardService cardService;
     Map<Long, Long> usersLastAccessTimes;
@@ -18,10 +18,12 @@ public class UserService implements IUserService{
         this.usersLastAccessTimes = new HashMap<>();
     }
 
+    // updates user last login time
     public void updateUserLastLoginTime(Long userId, Long timeInMillis){
         usersLastAccessTimes.put(userId, timeInMillis);
     }
 
+    // highlights newly added cards for user on the basis of last login time of user
     @Override
     public List<Card> highlightCardsForUser(Long userId, Long boardId) {
         if(userId == null || boardId == null || !boardService.activeBoards.contains(boardId)){

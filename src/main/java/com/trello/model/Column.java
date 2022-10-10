@@ -96,15 +96,17 @@ public class Column {
         this.cardsAdded = cards == null ? new ArrayList<>() : cards;
     }
     public boolean addCard(Card card){
-        if (card == null)
+        if (card == null){
             return false;
+        }
         this.cardsAdded.add(card);
         return true;
     }
 
     public boolean removeCard(Card card) {
-        if (card == null)
+        if (card == null){
             return false;
+        }
         this.cardsAdded.remove(card);
         return true;
     }

@@ -8,5 +8,5 @@ public interface IBoardService {
     boolean createBoardWithColumns(Long id, String name, Set<Column> columns, Long createdBy);
     boolean deleteBoard(Long id, boolean isSoftDelete);
 
-    void printBoardAsJSON(Long id);
+    String printBoardAsJSON(Long id);
 }

@@ -1,11 +1,12 @@
-package com.trello.service;
+package com.trello.service.impl;
 
 import com.trello.model.Card;
 import com.trello.model.Column;
+import com.trello.service.ICardService;
 
 import java.util.*;
 
-public class CardService implements ICardService{
+public class CardService implements ICardService {
     Map<Long, Long> cardToColumnMapping;
     Map<String, Set<Long>> tagVsCardMapping;
     SortedMap<Long, Long> timestampCardMapping;
@@ -99,8 +100,9 @@ public class CardService implements ICardService{
 
     @Override
     public List<Card> getAllCardsAfterTime(Long timestamp) {
-        if(timestamp == null)
+        if(timestamp == null){
             return Collections.emptyList();
+        }
         SortedMap<Long, Long> tailMap = this.timestampCardMapping.tailMap(timestamp);
         List<Card> res = new ArrayList<>();
         for(Long id: tailMap.values()){
@@ -111,8 +113,9 @@ public class CardService implements ICardService{
 
     @Override
     public List<Card> getAllCardsWithTag(String tag) {
-        if(tag == null || tag.isEmpty())
+        if(tag == null || tag.isEmpty()){
             return Collections.emptyList();
+        }
         List<Card> res = new ArrayList<>();
         if(tagVsCardMapping.containsKey(tag)) {
             for (Long id : tagVsCardMapping.get(tag)) {

@@ -1,8 +1,9 @@
-package com.trello.service;
+package com.trello.service.impl;
 
 import com.trello.model.Board;
 import com.trello.model.Card;
 import com.trello.model.Column;
+import com.trello.service.IColumnService;
 
 import java.util.*;
 
@@ -52,7 +53,6 @@ public class ColumnService implements IColumnService {
     }
 
     public boolean createColumn(Long id, String name,Board board, String description, Long createdBy) {
-
         return createColumnWithCards(id, name, board, description, null, createdBy);
     }
 

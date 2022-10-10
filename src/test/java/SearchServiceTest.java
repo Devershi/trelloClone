@@ -1,7 +1,6 @@
-import com.trello.model.Board;
 import com.trello.model.Card;
-import com.trello.service.ColumnService;
-import com.trello.service.SearchService;
+import com.trello.service.impl.ColumnService;
+import com.trello.service.impl.SearchService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

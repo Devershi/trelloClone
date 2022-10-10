@@ -1,9 +1,8 @@
 import com.trello.model.Column;
-import com.trello.service.BoardService;
+import com.trello.service.impl.BoardService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.runners.Suite;
 
 import java.util.HashSet;
 
@@ -32,6 +31,9 @@ public class BoardServiceTest {
         boolean created = bs.createBoard(1L, "Abc", 1L);
         Assertions.assertEquals(created, true);
 
+        bs.printBoardAsJSON(1L);
+        bs.toString();
+
         boolean created1 = bs.createBoard(1L, "Abc2", 1L);
         Assertions.assertEquals(created1, false);
     }
@@ -43,5 +45,17 @@ public class BoardServiceTest {
         columns.add(c);
         boolean created = bs.createBoardWithColumns(8L, "Abc", columns,1L);
         Assertions.assertEquals(created, true);
+    }
+
+    @Test
+    public void testBoardAddWithColumnsAndJSON(){
+        Column c = new Column(2l,"c1", "card1", 2L);
+        HashSet<Column> columns = new HashSet<>();
+        columns.add(c);
+        boolean created = bs.createBoardWithColumns(8L, "Abc", columns,1L);
+        Assertions.assertEquals(created, true);
+
+        String jsonResponse = bs.printBoardAsJSON(8L);
+        Assertions.assertNotNull(jsonResponse);
     }
 }

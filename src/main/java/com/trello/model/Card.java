@@ -1,8 +1,6 @@
 package com.trello.model;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class Card {
@@ -79,10 +77,11 @@ public class Card {
         this.labels = labels;
     }
 
-    public Card(){
+    public Card() {
         this.labels = new HashSet<>();
     }
-    public Card(Long id, String name, String description, Long createdBy){
+
+    public Card(Long id, String name, String description, Long createdBy) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -91,7 +90,7 @@ public class Card {
         this.labels = new HashSet<>();
     }
 
-    public Card(Long id, String name, String description, Set<String> labels, Long createdBy){
+    public Card(Long id, String name, String description, Set<String> labels, Long createdBy) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -100,16 +99,18 @@ public class Card {
         this.labels = labels == null ? new HashSet<>() : labels;
     }
 
-    public boolean addLabel(String label){
-        if(label == null || label.isEmpty())
+    public boolean addLabel(String label) {
+        if (label == null || label.isEmpty()) {
             return false;
+        }
         this.labels.add(label);
         return true;
     }
 
     public boolean removeLabel(String label) {
-        if(label == null || label.isEmpty())
+        if (label == null || label.isEmpty()){
             return false;
+        }
         this.labels.remove(label);
         return true;
     }
