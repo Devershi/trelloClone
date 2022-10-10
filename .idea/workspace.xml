@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b38c37b7-3a9e-4e09-8b47-9a23570648a9" name="Changes" comment="cardserviceTests Initial commit.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
+    <list default="true" id="b38c37b7-3a9e-4e09-8b47-9a23570648a9" name="Changes" comment="Added test case for highlighted cards.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/model/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/model/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/model/Column.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/CardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/ColumnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/ColumnService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/trello/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trello/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SearchServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665264137571</updated>
       <workItem from="1665264138812" duration="1508000" />
-      <workItem from="1665265668640" duration="22607000" />
+      <workItem from="1665265668640" duration="25340000" />
     </task>
     <task id="LOCAL-00001" summary="BoardService Initial commit.">
       <created>1665267376492</created>
@@ -184,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665310363937</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="userservicetest Initial commit.">
+      <created>1665355710516</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665355710516</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +205,9 @@
     <MESSAGE value="cardservice Initial commit." />
     <MESSAGE value="cardserviceTest Initial commit." />
     <MESSAGE value="cardserviceTests Initial commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="cardserviceTests Initial commit." />
+    <MESSAGE value="userservicetest Initial commit." />
+    <MESSAGE value="Added test case for highlighted cards." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test case for highlighted cards." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -228,6 +227,46 @@
           <line>43</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/trello/service/UserService.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/trello/service/UserService.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/UserServiceTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/UserServiceTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/trello/service/UserService.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/trello/service/UserService.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/trello/service/UserService.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/trello/service/UserService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/BoardServiceTest.java</url>
           <line>39</line>
@@ -236,6 +275,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/UserServiceTest.java</url>
+          <line>27</line>
+          <properties class="UserServiceTest" method="testNewCardsCountForBoard">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

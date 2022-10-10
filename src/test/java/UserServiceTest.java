@@ -32,14 +32,18 @@ public class UserServiceTest {
         columnService.createColumn(1L, "col1", b1,  "desc",1L);
         Column c1 = columnService.getColumnMap().get(1L);
         cardService.createCard(1L, "card1", "des", c1, null, 2L);
-        //Card cc1 = cardService.getCardMap().get(1L);
         bs.createBoard(2L, "Abc2", 1L);
+
+        try{
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            System.out.println("Use a logger to log the error.");
+        }
         Board b2 = bs.getBoardMap().get(2L);
         columnService.createColumn(2L, "col2", b2,  "desc",1L);
         Column c2 = columnService.getColumnMap().get(2L);
         cardService.createCard(2L, "card2", "des", c2, null, 2L);
-        //Card cc2 = cardService.getCardMap().get(2L);
-
+        
         List<Card> firstBoardCards =us.highlightCardsForUser(1L, 1L);
         Assertions.assertEquals(firstBoardCards.size(), 1L);
     }
